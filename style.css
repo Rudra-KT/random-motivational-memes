@@ -23,49 +23,71 @@ html{
     margin-left: 25%;
     margin-top: 100px;
 }
-.button{
-    
-   text-align: center;  
-  align-items: center;
-  appearance: none;
-  background-color: #FCFCFD;
-  border-radius: 4px;
-  border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #36395A;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
-}
-
-.button:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
 
 .button:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  box-shadow: hwb(0 100% 0% / 0.735) 0 4px 8px, hsla(0, 0%, 0%, 0.352) 0 7px 10px -1px, hwb(0 100% 0% / 0.735) 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
 .button:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
+  box-shadow: rgb(168, 119, 28) 0 3px 7px inset;
   transform: translateY(2px);
+} 
+button {
+  animation: wiggle 2s linear infinite;
 }
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+body {
+  background: #000;
+}
+
+button {
+  left: calc(50% - 3em);
+  top: calc(50% - 2em);
+  
+  height: 25px;
+  width: 45px;
+  
+  background: #444;
+  background: linear-gradient(top, #555, #333);
+  border: none;
+  border-top: 3px solid #fff;
+  border-radius: 0 0 0.2em 0.2em;
+  color: #fff;
+  font-family: Helvetica, Arial, Sans-serif;
+  font-size: 12px;
+  transform-origin: 50% 5em;
+  text-align: center;
+  padding-bottom: 3px;
+}
+.bottom-container{
+  background-color: black;
+  padding-top: 30px;
+  height: 35px;
+}
+
