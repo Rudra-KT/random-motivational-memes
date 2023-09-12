@@ -25,7 +25,7 @@ html{
 }
 
 .button:hover {
-  box-shadow: hwb(0 100% 0% / 0.735) 0 4px 8px, hsla(0, 0%, 0%, 0.352) 0 7px 10px -1px, hwb(0 100% 0% / 0.735) 0 -3px 0 inset;
+  box-shadow: hsl(39, 89%, 37%) 0 4px 8px, black 0 7px 10px -1px, hsl(39, 89%, 37%) 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
@@ -73,13 +73,13 @@ button {
   height: 25px;
   width: 45px;
   
-  background: #444;
+  background: #000000;
   background: linear-gradient(top, #555, #333);
   border: none;
-  border-top: 3px solid #fff;
+  border-top: 3px solid orange;
   border-radius: 0 0 0.2em 0.2em;
   color: #fff;
-  font-family: Helvetica, Arial, Sans-serif;
+  font-family: silkscreen, Arial, Sans-serif;
   font-size: 12px;
   transform-origin: 50% 5em;
   text-align: center;
@@ -87,7 +87,5 @@ button {
 }
 .bottom-container{
   background-color: black;
-  padding-top: 30px;
-  height: 35px;
 }
 
